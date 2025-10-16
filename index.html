@@ -1,26 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calculadora Web</title>
-  <link rel="stylesheet" href="css/estilos.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final GitHub - Cesar Gonzalo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="contenedor">
-    <h1>🧮 Calculadora Web</h1>
-    <input type="number" id="num1" placeholder="Número 1">
-    <select id="operacion">
-      <option value="+">+</option>
-      <option value="-">-</option>
-      <option value="*">*</option>
-      <option value="/">/</option>
-    </select>
-    <input type="number" id="num2" placeholder="Número 2">
-    <button onclick="calcular()">Calcular</button>
-    <h2 id="resultado">Resultado:</h2>
-  </div>
 
-  <script src="js/main.js"></script>
+    <header>
+        <h1>Proyecto Final - Curso de GitHub</h1>
+        <p>Demostración del uso de Git, GitHub, ramas, issues, tags y más.</p>
+    </header>
+
+    <main>
+        <section id="intro">
+            <h2>Bienvenido</h2>
+            <p>Este proyecto integra HTML, CSS, JS y PHP. Fue desarrollado como parte del curso de GitHub para demostrar control de versiones y buenas prácticas.</p>
+        </section>
+
+        <section id="formulario">
+            <h2>Formulario de Contacto</h2>
+            <form action="procesar.php" method="POST" id="contactForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section id="resultado">
+            <h3 id="mensajeResultado"></h3>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Proyecto Final - Curso GitHub | Desarrollado por Cesar Gonzalo</p>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
