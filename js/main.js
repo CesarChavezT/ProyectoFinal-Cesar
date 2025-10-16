@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
             mensajeResultado.textContent = "⚠️ Todos los campos son obligatorios.";
             mensajeResultado.style.color = "red";
         } else {
-            mensajeResultado.textContent = "✅ Enviando datos.....";
+            mensajeResultado.textContent = "✅ Enviando   datos.....";
             mensajeResultado.style.color = "green";
         }
     });
