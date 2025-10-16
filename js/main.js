@@ -1,31 +1,24 @@
-function calcular() {
-  const num1 = parseFloat(document.getElementById('num1').value);
-  const num2 = parseFloat(document.getElementById('num2').value);
-  const operacion = document.getElementById('operacion').value;
-  const resultadoEl = document.getElementById('resultado');
+// ====== main.js ======
+// Archivo JavaScript para manejo básico del formulario y validaciones
 
-  if (isNaN(num1) || isNaN(num2)) {
-    resultadoEl.textContent = "Por favor, ingresa números válidos.";
-    return;
-  }
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+    const mensajeResultado = document.getElementById("mensajeResultado");
 
-  let resultado;
+    form.addEventListener("submit", (e) => {
+        const nombre = document.getElementById("nombre").value.trim();
+        const correo = document.getElementById("correo").value.trim();
+        const mensaje = document.getElementById("mensaje").value.trim();
 
-  switch (operacion) {
-    case '+': resultado = num1 + num2; break;
-    case '-': resultado = num1 - num2; break;
-    case '*': resultado = num1 * num2; break;
-    case '/':
-      if (num2 === 0) {
-        resultadoEl.textContent = "No se puede dividir entre cero.";
-        return;
-      }
-      resultado = num1 / num2;
-      break;
-    default:
-      resultadoEl.textContent = "Operación inválida.";
-      return;
-  }
-
-  resultadoEl.textContent = `Resultado: ${resultado}`;
-}
+        // Validación básica
+        if (nombre === "" || correo === "" || mensaje === "") {
+            e.preventDefault();
+            mensajeResultado.textContent = "⚠️ Todos los campos son obligatorios.";
+            mensajeResultado.style.color = "red";
+        } else {
+            mensajeResultado.textContent = "✅ Enviando datos...";
+            mensajeResultado.style.color = "green";
+        }
+    });
+    
+});   
