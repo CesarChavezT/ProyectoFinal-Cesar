@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora Web</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+  <div class="contenedor">
+    <h1>🧮 Calculadora Web</h1>
+    <input type="number" id="num1" placeholder="Número 1">
+    <select id="operacion">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+    <input type="number" id="num2" placeholder="Número 2">
+    <button onclick="calcular()">Calcular</button>
+    <h2 id="resultado">Resultado:</h2>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
