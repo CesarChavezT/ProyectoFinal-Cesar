@@ -12,13 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Validación básica
         if (nombre === "" || correo === "" || mensaje === "") {
-            e.preventDefault();
+            e.preventDefault(); 
             mensajeResultado.textContent = "⚠️ Todos los campos son obligatorios.";
             mensajeResultado.style.color = "red";
         } else {
-            mensajeResultado.textContent = "✅ Enviando datos...";
+            mensajeResultado.textContent = "✅ Enviando datos.....";
             mensajeResultado.style.color = "green";
         }
     });
-    
+
 });   
